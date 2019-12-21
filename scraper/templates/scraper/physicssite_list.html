@@ -1,0 +1,68 @@
+{% extends "pages/base.html" %}
+{% block content %}
+
+
+<div class='col-sm-6 col-sm-offset-3'>
+    <h1>Physic.org News</h1>
+    <h4>Data scraped from <a href='https://phys.org/physics-news/'>phys.org/physics-news/</a></h4>
+{% for obj in physicssite_list %}
+<div class="row">
+  <div class="col-sm-12">
+    <div class="thumbnail">
+        {% if obj.article_img %}
+         <img src='{{ obj.article_img }}' class='img-responsive' />
+        {% endif %}
+      <div class="caption post-detail-item">
+         <h3><a href='{{ obj.article_link }}'>{{ obj.article_title }}</a> <br/><small>{{ obj.article_title }}</small></h3>
+        <p><a href="{{ obj.article_link }}" class="btn btn-primary" role="button">View</a></p>
+      </div>
+    </div>
+  </div>
+<hr/>
+</div>
+{% endfor %}
+
+{% if is_paginated %}
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+<!--<div class="pagination">-->
+<!--    <span class="step-links">-->
+<!--        {% if book.has_previous %}-->
+<!--            <a href="?{{ page_request_var }}={{ book.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>-->
+<!--        {% endif %}-->
+
+<!--        <span class="current">-->
+<!--            Page {{ book.number }} of {{ book.paginator.num_pages }}.-->
+<!--        </span>-->
+
+<!--        {% if book.has_next %}-->
+<!--            <a href="?{{ page_request_var }}={{ book.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>-->
+<!--        {% endif %}-->
+<!--    </span>-->
+<!--</div>-->
+
+
+
+
+</div>
+<!--<h2>POST LIST</h2>-->
+{% endblock content %}

@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Mant Monster - Django Python Solutions">
+    <title>Mant Monster - Django Python Solutions</title>
+    <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="{% static "assets/css/Article-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/Footer-Basic.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/Header-Blue.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/Highlight-Blue.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/Navigation-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/styles.css" %}">
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="row no-gutters" style="margin:0px;padding:10px;">
+                <div class="col-md-6"><img src="{% static "img/poweredBy.png" %}"></div>
+                <div class="col-md-6 mr-auto">
+                    <a class="btn btn-primary" role="button" href="/posts/">Blog</a>
+                    <a class="btn btn-primary" role="button" href="/postsREST/">REST API</a>
+                    <a class="btn btn-primary" role="button" href="/sitemap.xml">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="align-self-center">
+        <div class="container justify-content-center align-items-center align-content-center">
+            <div class="row">
+                <div class="clearfix"></div>
+            </div>
+            <div class="row align-self-center" style="background-color:rgba(179,171,171,0);padding:50px;">
+                <div class="col offset-lg-1 offset-xl-2">
+                    <img class="rounded-circle img-fluid" src="{% static "img/mant01.jpg" %}" alt="My image"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><span><br><br>At Mant we believe in two simple rules; portability and simplicity.&nbsp;&nbsp;<br><strong>And collaboration.&nbsp;&nbsp;</strong><br>At Mant we believe in 3 core concepts to application development; portability, simplicity, collaboration.&nbsp;&nbsp;<br><strong>And early delivery.&nbsp;</strong><br>At Mant Monster we believe in four simple approaches to application development, portability, simplicity, collaboration, early delivery and an almost fanatical devotion to the pope.<br>Forget it, we do Django, our experiments are being collected in the ugly blue buttons at the top. &nbsp;<br><br><br></span></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><br><img class="rounded-circle float-left" src="{% static "img/django01.jpg" %}" style="margin:20px;" alt="My image">Django is a high-level Python web framework that enables rapid development of&nbsp;secure and maintainable websites. Built by experienced developers,
+                        Django takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It is free and open source,&nbsp;has a thriving and active community, great documentation,
+                        and many&nbsp;options for&nbsp;free and paid-for support.&nbsp;<br><br></p>
+                </div>
+                <div class="col-md-6">
+                    <p><br><img class="rounded-circle float-left" src="{% static "img/python01.jpg" %}" style="margin:20px;" alt="My image">>Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design
+                        philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects. <br><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <p class="copyright">A <a href="http://verysickcompany.com/">Very Sick Company</a> © 2019</p>
+        </footer>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static "assets/js/jquery.min.js" %}"></script>
+    <script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+</body>
+
+</html>

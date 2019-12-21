@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name mantmonster2.com;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/mhughes/myproject;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/mhughes/myproject/myproject.sock;
+    }
+}
